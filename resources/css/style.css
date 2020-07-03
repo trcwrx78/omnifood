@@ -8,13 +8,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: #fff;
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -205,6 +207,15 @@ header {
   margin-top: 20px;
 }
 
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin-top: 5px;
+}
+
+/* Main Navi */
 .main-nav {
   float: right;
   list-style: none;
@@ -230,6 +241,35 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 2px solid #e67e22;
+}
+
+/* Sticky Navi */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.979);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+/* may need fixed */
+.sticky .main-nav {
+  margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 16px 0;
+  color: #555;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .logo-black {
+  display: block;
 }
 
 /* ------------------------------------------- */
